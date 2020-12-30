@@ -1,22 +1,22 @@
 import './App.css';
-import ButtonPage from './pages/ButtonPage';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Navigation from './components/Navigation';
+import AnimationApp from './components/AnimationApp';
 
 function App() {
+
   return (
     <div>
       <Router>
-      <Navigation />
+        <Navigation />
         <Switch>
-            <Route path="/about">
-              <ButtonPage />
-            </Route>
+          <Route path="*">
+            <AnimationApp />
+          </Route>
         </Switch>
       </Router>
     </div>
