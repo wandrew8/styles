@@ -1,8 +1,10 @@
 import './App.css';
+import HomePage from './pages/HomePage';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import Navigation from './components/Navigation';
 import AnimationApp from './components/AnimationApp';

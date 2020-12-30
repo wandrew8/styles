@@ -1,19 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ButtonPage = () => {
+const HomePage = () => {
     return (
         <Page>
-            <h1>Buttons!</h1>
+            <h1>Home</h1>
         </Page>
     )
 }
 
 const Page = styled.div`
     height: calc(100vh - 100px);
-    background-color: gray;
+    background-color: cyan;
     color: #fff;
 `;
 
-
-export default ButtonPage;
+export default HomePage;
