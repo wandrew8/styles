@@ -3,8 +3,7 @@ import HomePage from './pages/HomePage';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Redirect
+  Route
 } from "react-router-dom";
 import Navigation from './components/Navigation';
 import AnimationApp from './components/AnimationApp';

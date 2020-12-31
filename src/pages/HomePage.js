@@ -1,18 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import PageContainer from '../components/PageContainer';
 
 const HomePage = () => {
     return (
-        <Page>
-            <h1>Home</h1>
-        </Page>
+        <PageContainer background="green">
+            <h1>Home!</h1>
+        </PageContainer>
     )
 }
-
-const Page = styled.div`
-    height: calc(100vh - 100px);
-    background-color: cyan;
-    color: #fff;
-`;
 
 export default HomePage;

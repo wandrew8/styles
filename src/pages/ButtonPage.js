@@ -1,19 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import PageContainer from '../components/PageContainer';
 
 const ButtonPage = () => {
     return (
-        <Page>
+        <PageContainer background="blue">
             <h1>Buttons!</h1>
-        </Page>
+        </PageContainer>
     )
 }
-
-const Page = styled.div`
-    height: calc(100vh - 100px);
-    background-color: gray;
-    color: #fff;
-`;
-
 
 export default ButtonPage;

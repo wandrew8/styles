@@ -40,14 +40,14 @@ const AnimationApp = () => {
 const AnimationStyles = styled.div`
     .fade-enter {
         opacity: 0;
-        transform: translateY(-10px);
         z-index: 1;
+        overflow: hidden;
         }
 
         .fade-enter.fade-enter-active {
         opacity: 1;
-        transform: translateY(0px);
-        transition: 250ms ease-in;
+        transition: 300ms ease-in;
+        overflow: hidden;
         }
 `;
 
