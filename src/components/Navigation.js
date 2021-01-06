@@ -6,6 +6,7 @@ const Navigation = () => {
     return (
         <nav>
             <NavLink activeClassName="selected" to="/buttons">Buttons</NavLink>
+            <NavLink activeClassName="selected" to="/cards">Cards</NavLink>
             <NavLink exact activeClassName="selected" to="/">Home</NavLink>
         </nav>
     )

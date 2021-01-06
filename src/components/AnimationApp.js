@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonPage from '../pages/ButtonPage';
+import CardsPage from '../pages/CardsPage';
 import HomePage from '../pages/HomePage';
 import {
     TransitionGroup,
@@ -26,6 +27,9 @@ const AnimationApp = () => {
                     <Switch location={location}>
                         <Route path="/buttons">
                             <ButtonPage />
+                        </Route>
+                        <Route path="/cards">
+                            <CardsPage />
                         </Route>
                         <Route path="/">
                             <HomePage />
