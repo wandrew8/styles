@@ -10,7 +10,7 @@ const CardsPage = () => {
         <PageContainer background="yellow">
             <h1>Cards</h1>
             <button onClick={() => setShowModal(true)}>Show Modal</button>
-            { showModal && <ModalForm closeModal={closeModal}/> }
+            { showModal && <ModalForm closeModal={closeModal} showModal={showModal}/> }
             <CardOne heading="Welcome" subtitle="A new beginning" text="This is a card that looks really cool" />
         </PageContainer>
     )
