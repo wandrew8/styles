@@ -15,8 +15,12 @@ const SideNavigation = () => {
         closeNav();
     });
     return (
+        <Header>
+
         <Nav ref={ref}>
-           <FontAwesomeIcon className="icon" icon={faBars} onClick={toggleNav}/>
+            <div className="icon-holder">
+                <FontAwesomeIcon className="icon" icon={faBars} onClick={toggleNav}/>
+            </div>
            <CSSTransition
             in={expandNav}
             timeout={300}
@@ -31,28 +35,52 @@ const SideNavigation = () => {
                         <NavLink activeClassName="selected" to="/buttons">
                             <li className="sidebar-link" onClick={closeNav}>Buttons</li>
                         </NavLink>
-                        <NavLink activeClassName="selected" exact to="/cards">
+                        <NavLink activeClassName="selected" to="/cards">
                             <li className="sidebar-link" onClick={closeNav}>Cards</li>
+                        </NavLink>
+                        <NavLink activeClassName="selected" to="/calendar">
+                            <li className="sidebar-link" onClick={closeNav}>Calendar</li>
                         </NavLink>
                     </ul>
                 </div>
 
            </CSSTransition>
         </Nav>
+        </Header>
     )
 }
+
+const Header = styled.header`
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    z-index: 110;
+    position: absolute;
+    top: 0;
+`;
 
 const Nav = styled.nav`
     z-index: 100;
     position: absolute;
     background-color: white;
-    padding: 0.5rem 1rem 1rem 1rem;
     margin: 0;
+    transform: translate(0);
+    border-radius: 0px 0px 10px 0px;
     .selected {
-        background: gray;
+        background-color: gray;
         color: white;
         width: 100%;
         height: 100%;
+        outline: none;
+        li {
+            background-color: gray;
+        }
+    }
+    .icon-holder {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        margin: 0rem 2rem;
     }
     .icon {
         &:hover {
@@ -61,7 +89,7 @@ const Nav = styled.nav`
     }
     ul {
         list-style-type: none;
-        padding: 0;
+        padding: 0.5rem 1rem 1rem 1rem;
         margin: 0;
         a {
             text-decoration: none;
@@ -69,30 +97,54 @@ const Nav = styled.nav`
             color: black;
         }
         li {
-            border-bottom: solid black 1px;
+            border-bottom: solid gray 1px;
             width: 100px;
             padding: 0.5rem;
             transition: 200ms ease-in;
             :hover {
-                transform: scale(1.1);
+                background-color: gray;
+                color: white;
             }
             
         }
     }
     .visible-enter {
         transform: translate(-100%);
+        z-index: 100;
+        position: absolute;
+        background-color: white;
+        margin: 0;
+        border-radius: 0px 0px 10px 0px;
+
     }
     .visible-enter-active {
         transform: translate(0);
         transition: 300ms linear;
+        z-index: 100;
+        position: absolute;
+        background-color: white;
+        margin: 0;
+        border-radius: 0px 0px 10px 0px;
+
+
     }
     .visible-exit {
         transform: translate(0);
+        z-index: 100;
+        position: absolute;
+        background-color: white;
+        margin: 0;
+        border-radius: 0px 0px 10px 0px;
 
     }
     .visible-exit-active {
         transform: translate(-100%);
         transition: 300ms linear;
+        z-index: 100;
+        position: absolute;
+        background-color: white;
+        margin: 0;
+        border-radius: 0px 0px 10px 0px;
 
     }
 `;

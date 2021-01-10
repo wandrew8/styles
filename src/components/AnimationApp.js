@@ -2,6 +2,7 @@ import React from 'react';
 import ButtonPage from '../pages/ButtonPage';
 import CardsPage from '../pages/CardsPage';
 import HomePage from '../pages/HomePage';
+import CalendarPage from '../pages/CalendarPage';
 import {
     TransitionGroup,
     CSSTransition
@@ -30,6 +31,9 @@ const AnimationApp = () => {
                         </Route>
                         <Route path="/cards">
                             <CardsPage />
+                        </Route>
+                        <Route path="/calendar">
+                            <CalendarPage />
                         </Route>
                         <Route path="/">
                             <HomePage />
