@@ -47,6 +47,7 @@ const Modal = styled.div`
     background-color: white;
     border: black 1px solid;
     border-radius: 2rem;
+    z-index: 100;
     .transition-enter {
         opacity: 0;
     }
