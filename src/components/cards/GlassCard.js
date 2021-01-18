@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Tilt from 'react-tilt';
 
 const GlassCard = (props) => {
     const { number, heading, text, link="#" } = props;
     return (
-        <Tilt options={{ max: 15, speed: 400, scale: 1, glare: true, "max-glare": 1 }} style={{ backdropFilter: "blur(4px)", backgroundColor: "transparent", padding: "0px", margin: "15px" }}>
             <Card>
                 <div className="content">
                     <h2>{number}</h2>
@@ -14,7 +12,6 @@ const GlassCard = (props) => {
                     <a href={link}>Read More</a>
                 </div>
             </Card>
-        </Tilt>
     )
 }
 
@@ -27,6 +24,7 @@ const Card = styled.div`
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
     display: flex;
+    margin: 15px;
     justify-content: center;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -45,8 +43,8 @@ const Card = styled.div`
     .content {
         padding: 20px;
         text-align: center;
-        transition: 0.2s;
-        transform: translateY(5px);
+        transition: 200ms ease-in;
+        transform: translateY(3px);
         opacity: 0.7;
         backdrop-filter: blur(1px);
 
@@ -56,8 +54,7 @@ const Card = styled.div`
             right: 30px;
             font-size: 8em;
             color: rgba(255, 255, 255, 0.1);
-            pointer-events: none;
-            transition: 0.2s;
+            transition: 200ms ease-in;
 
         }
         h3 {
