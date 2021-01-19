@@ -5,14 +5,14 @@ import { Draggable } from 'react-beautiful-dnd';
 const EventCard = (props) => {
     const { event, day, month, location, category, index } = props;
     return (
-        <Draggable draggableId="card" index={index}>
-            {(provided) => {   
+        <Draggable draggableId={event} index={index}>
+            {(provided, snapshot) => {   
                 return (
                     <Card
                         ref={provided.innerRef}
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}>
-                                        <div className="content">
+                        <div className="content">
                             <div className="date">
                                 <h2>{day}</h2>
                                 <h3>{month}</h3>
@@ -37,7 +37,7 @@ const Card = styled.div`
     transition: 100ms ease-in-out;
     border-radius: 10px;
     backdrop-filter: blur(5px);
-
+    margin-bottom: 10px;
     .content {
         display: flex;
         justify-content: center;
